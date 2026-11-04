@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognition</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Handwritten Digit Recognition</h1>
+            <p>Draw a digit (0-9)</p>
+        </header>
+        <!-- Main Section -->
+        <main class="main-content">
+            <!-- Drawing Section -->
+            <section class="draw-section">
+                <h2>Draw Your Digit</h2>
+                <canvas id="canvas"
+                        width="320"
+                        height="320">
+                </canvas>
+                <div class="buttons">
+                    <button id="predictBtn" class="predict-btn">
+                        Predict
+                    </button>
+                    <button id="clearBtn" class="clear-btn">
+                        Clear
+                    </button>
+                </div>
+            </section>
+            <!-- Prediction Section -->
+            <section class="output-section">
+                <h2>Prediction Result</h2>
+                <div id="result">
+                    <div class="placeholder">
+                        <span>?</span>
+                        <p>Your predicted digit will appear here.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>MNIST Digit Recognition</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

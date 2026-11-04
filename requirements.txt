@@ -6,3 +6,6 @@ torch
 tensorflow
 keras
 seaborn
+pillow
+flask
+scipy

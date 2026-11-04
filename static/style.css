@@ -1,0 +1,199 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    min-height: 100vh;
+    padding: 25px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 22px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    color: #312e81;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Main Layout */
+.main-content {
+    display: flex;
+    gap: 18px;
+    align-items: stretch;
+}
+
+/* Drawing and Output Sections */
+.draw-section,
+.output-section {
+    flex: 1;
+    min-width: 0;
+    min-height: 420px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #c7d2fe;
+    border-radius: 14px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #3730a3;
+    margin-bottom: 20px;
+}
+
+/* Drawing Canvas */
+#canvas {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: auto;
+    background: white;
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+button {
+    padding: 11px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.predict-btn {
+    background: #4f46e5;
+}
+
+.predict-btn:hover {
+    background: #3730a3;
+}
+
+.clear-btn {
+    background: #6b7280;
+}
+
+.clear-btn:hover {
+    background: #374151;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Prediction Output */
+#result {
+    min-height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Big Predicted Digit */
+.predicted-digit {
+    font-size: 145px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #4f46e5;
+}
+
+/* Probability */
+.probability {
+    font-size: 28px;
+    font-weight: bold;
+    color: #16a34a;
+    margin-top: 10px;
+}
+
+.prediction-label {
+    font-size: 15px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+/* Initial Placeholder */
+.placeholder span {
+    font-size: 100px;
+    color: #c7d2fe;
+    font-weight: bold;
+}
+
+.placeholder p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Error Message */
+.error-message {
+    color: #dc2626;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .draw-section,
+    .output-section {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .predicted-digit {
+        font-size: 120px;
+    }
+}
