@@ -19,7 +19,7 @@
 
 Handwritten digit recognition is a standard test of whether a model can learn visual patterns from
 raw pixels. This project trains a **Convolutional Neural Network (CNN)** on the
-[MNIST](http://yann.lecun.com/exdb/mnist/) dataset to recognise the digits `0` to `9`, and serves the
+[MNIST]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) dataset to recognise the digits `0` to `9`, and serves the
 trained model in a small **Flask web app** where a digit is drawn with the mouse and predicted in the
 browser.
 
@@ -80,7 +80,7 @@ from it inside the notebook.
 
 | # | Dataset | Type | Built from | Used in | Link |
 |---|---|---|---|---|---|
-| 1 | MNIST | Public, original | — | Source for dataset 2 and for testing | [MNIST page](http://yann.lecun.com/exdb/mnist/) |
+| 1 | MNIST | Public, original | — | Source for dataset 2 and for testing | [MNIST page]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) |
 | 2 | Balanced training set | Derived in the notebook | Training part of MNIST | Training and validation | `notebook/Handwritten_recognition.ipynb` |
 
 ```mermaid
@@ -98,7 +98,7 @@ flowchart LR
 
 | Property | Value |
 |---|---|
-| Source | [MNIST handwritten digit database](http://yann.lecun.com/exdb/mnist/) |
+| Source | [MNIST handwritten digit database]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) |
 | Content | Grayscale images of single handwritten digits |
 | Training images | 60,000 |
 | Test images | 10,000 |
@@ -268,7 +268,7 @@ mistake dominates.
 - Recall is lowest for digit 6 (0.9864) and digit 9 (0.9881), the two digits most often mistaken for
   others.
 - The most common confusions (5 and 3, 7 and 1, 6 and 5) involve digits with similar shapes.
-- Many wrong predictions are hard to read even for a person, for example a 7 with no crossbar, a 9 that
+- Many wrong predictions are hard to read even for a person, for example, a 7 with no crossbar, a 9 that
   is open at the top, or a scribbled 6. Part of the remaining error therefore comes from ambiguous
   handwriting rather than from the model.
 - Some mistakes are made with high confidence, so the predicted probability should not be read as a
