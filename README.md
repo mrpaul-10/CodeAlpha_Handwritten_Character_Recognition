@@ -19,7 +19,7 @@
 
 Handwritten digit recognition is a standard test of whether a model can learn visual patterns from
 raw pixels. This project trains a **Convolutional Neural Network (CNN)** on the
-[MNIST]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) dataset to recognise the digits `0` to `9`, and serves the
+[MNISTDigit](https://data.mendeley.com/datasets/k864xjhrw6/1) dataset (the MNIST handwritten digits) to recognise the digits `0` to `9`, and serves the
 trained model in a small **Flask web app** where a digit is drawn with the mouse and predicted in the
 browser.
 
@@ -80,7 +80,7 @@ from it inside the notebook.
 
 | # | Dataset | Type | Built from | Used in | Link |
 |---|---|---|---|---|---|
-| 1 | MNIST | Public, original | — | Source for dataset 2 and for testing | [MNIST page]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) |
+| 1 | MNISTDigit (MNIST) | Public, original | — | Source for dataset 2 and for testing | [Mendeley Data](https://data.mendeley.com/datasets/k864xjhrw6/1) |
 | 2 | Balanced training set | Derived in the notebook | Training part of MNIST | Training and validation | `notebook/Handwritten_recognition.ipynb` |
 
 ```mermaid
@@ -94,12 +94,15 @@ flowchart LR
     G --> F
 ```
 
-### 1.1 MNIST (original dataset)
+### 1.1 MNISTDigit (original dataset)
 
 | Property | Value |
 |---|---|
-| Source | [MNIST handwritten digit database]([http://yann.lecun.com/exdb/mnist/](https://data.mendeley.com/datasets/k864xjhrw6/1)) |
-| Content | Grayscale images of single handwritten digits |
+| Source | [MNISTDigit, Mendeley Data](https://data.mendeley.com/datasets/k864xjhrw6/1) |
+| Contributor | Arpit Rai (Mendeley Data, version 1, published 3 April 2023) |
+| DOI | [10.17632/k864xjhrw6.1](https://doi.org/10.17632/k864xjhrw6.1) |
+| Licence | CC BY 4.0 |
+| Content | Grayscale images of handwritten English numerals 0-9, originating from NIST |
 | Training images | 60,000 |
 | Test images | 10,000 |
 | Image size | 28 × 28 pixels, values 0-255 |
@@ -403,12 +406,13 @@ Training 20 epochs took roughly 30 to 150 seconds per epoch on a CPU.
 ## 11. License and references
 
 The code in this repository is released under the [MIT License](LICENSE). Third-party components are
-subject to their own licenses: TensorFlow and Keras, Flask, and the MNIST dataset.
+subject to their own licenses: TensorFlow and Keras, Flask, and the MNISTDigit dataset (CC BY 4.0, Mendeley Data).
 
 **References**
 
-1. Y. LeCun, L. Bottou, Y. Bengio, P. Haffner. *Gradient-Based Learning Applied to Document
+1. A. Rai. *MNISTDigit.* Mendeley Data, Version 1, 2023. [doi:10.17632/k864xjhrw6.1](https://doi.org/10.17632/k864xjhrw6.1).
+2. Y. LeCun, L. Bottou, Y. Bengio, P. Haffner. *Gradient-Based Learning Applied to Document
    Recognition.* Proceedings of the IEEE, 1998.
-2. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, R. Salakhutdinov. *Dropout: A Simple Way to
+3. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, R. Salakhutdinov. *Dropout: A Simple Way to
    Prevent Neural Networks from Overfitting.* JMLR, 2014.
-3. D. P. Kingma, J. Ba. *Adam: A Method for Stochastic Optimization.* ICLR, 2015.
+4. D. P. Kingma, J. Ba. *Adam: A Method for Stochastic Optimization.* ICLR, 2015.
